@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Vazirmatn:wght@100;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+body{
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.progress-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 550px;
+}
+
+.progress-container::before{
+    content: '';
+    background-color: #717c87;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 6px;
+    width: 100%;
+    z-index: -1;
+}
+
+.progress{
+    background-color: #006eff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 6px;
+    width: 0%;
+    z-index: -1;
+    transition: .4s ease;
+}
+
+.circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 7px solid #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle.active{
+    border-color: #006eff;
+}
+
+.btn{
+    padding: 15px 40px;
+    background-color: #006eff;
+    color: #fff;
+    position: relative;
+    top: 70px;
+    left: 130px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+    border: 1.5px solid #000;
+}
+
+.btn:hover{
+    background-color: #0064e8;
+}
+
+.btn:disabled {
+    background-color: #717c87;
+    color: #000;
+}
+
+@media only screen and (max-width:600px){
+
+    body{
+        font-size: 20px;
+    }
+
+    .progress-container{
+        width: 350px;
+    }
+
+    .progress-container::before{
+        height: 3px;
+        width: 100%;
+    }    
+
+    .progress{
+        height: 3px;
+    }
+
+    .circle{
+        width: 35px;
+        height: 35px;
+        border: 3px solid #888;
+    }
+
+    .btn{
+        padding: 10px 15px;
+        position: relative;
+        top: 70px;
+        left: 85px;
+        font-size: 15px;
+    }
+
+    #next{
+        padding: 10px 25px;
+    }
+
+    .btn:hover{
+        background-color: #0064e8;
+    }
+    
+}
+
+@media only screen and (max-width:320px){
+    body{
+        font-size: 15px;
+    }
+
+    .progress-container{
+        width: 280px;
+    }
+
+    .progress-container::before{
+        height: 3px;
+        width: 100%;
+    }    
+
+    .progress{
+        height: 3px;
+    }
+
+    .circle{
+        width: 30px;
+        height: 30px;
+        border: 3px solid #888;
+    }
+
+    .btn{
+        padding: 10px 15px;
+        position: relative;
+        top: 50px;
+        left: 60px;
+        font-size: 12px;
+    }
+
+    #next{
+        padding: 10px 25px;
+    }
+
+    .btn:hover{
+        background-color: #0064e8;
+    }
+
+}
